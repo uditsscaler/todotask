@@ -17,6 +17,7 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/1/edit
   def edit
+    puts "hello world"
   end
 
   # POST /todo_lists or /todo_lists.json
@@ -49,6 +50,11 @@ class TodoListsController < ApplicationController
 
   # DELETE /todo_lists/1 or /todo_lists/1.json
   def destroy
+    puts "deleting item###############################################"
+    @todo_item = @todo_list.todo_items.find_all()
+    enum=@todo_item.each
+    loop {enum.next.destroy}
+
     @todo_list.destroy
     
     respond_to do |format|
@@ -56,7 +62,7 @@ class TodoListsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_todo_list
@@ -68,3 +74,4 @@ class TodoListsController < ApplicationController
       params.require(:todo_list).permit(:title, :description)
     end
 end
+

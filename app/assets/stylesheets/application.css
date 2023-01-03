@@ -161,6 +161,22 @@
 	font-size: 0.8em;
 	color: white;
   }
+
+  .links-btn {
+	display: block;
+	margin: 1.5em auto 0 auto;
+	text-align: center;
+	font-size: 0.8em;
+	color: red;
+	font-weight: bold !important;
+	background: none!important;
+	border: none;
+	padding: 0!important;
+	cursor: pointer;
+	width: 10em;
+
+  }
+
   .links a {
 	color: #756164cb;
   }
