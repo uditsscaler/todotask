@@ -48,15 +48,15 @@ class TodoListsController < ApplicationController
   end
 
   # DELETE /todo_lists/1 or /todo_lists/1.json
-   def destroy
+  def destroy
     @todo_list.destroy
-
+    
     respond_to do |format|
-      format.html { redirect_to todo_lists_url, notice: "Todo list was successfully destroyed." }
+      format.html { redirect_to root_url, notice: 'Todo list was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_todo_list

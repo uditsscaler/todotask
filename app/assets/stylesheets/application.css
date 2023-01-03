@@ -62,8 +62,11 @@
   }
   .todo_list_title a {
 	text-decoration: none;
-	color: white;
+	color: #756164cb;
 	transition: all 0.4s ease-in-out;
+  }
+  .todo_item_font{
+	font-weight: bold !important;
   }
   .todo_list_title a:hover {
 	opacity: 0.4;
@@ -76,8 +79,8 @@
 	font-weight: 100;
   }
   .index_row {
-	padding: 2em;
-	border-bottom: 1px solid rgba(250, 250, 250, 0.3);
+	padding: 3em;
+	border-bottom: 8px solid rgba(250, 250, 250, 0.3);
   }
   .index_row .todo_list_sub_title {
 	margin-bottom: 0;
